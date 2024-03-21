@@ -1,95 +1,91 @@
-// ignore: file_names
-
-// import 'second_page.dart'; // Import the second page
-
-// class FirstPage extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Center(
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             // Display the "Let's Go" text
-//             // Text(
-//             //   "Let's Go",
-//             //   style: TextStyle(fontSize: 30),
-//             // ),
-//             // SizedBox(height: 20),z
-//             // Add the "Next" button
-//             ElevatedButton(
-//               onPressed: () {
-//                 // Navigate to the second page when the button is pressed
-//                 Navigator.push(
-//                   context,
-//                   MaterialPageRoute(builder: (context) => SecondPage()),
-//                 );
-//               },
-//               child: Text("Lets go"),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
-
-
-
-
-
-
-
 import 'package:flutter/material.dart';
-import 'package:project/second_page.dart';
-class FirstPage extends StatelessWidget {
+import 'second_page.dart';
+
+class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
+  _FirstPageState createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Page'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              children: [
-                Image.asset('assets/care_pat.jpeg'), // your image path
-                const SizedBox(height: 20.0),
-                const Text(
-                  'welcome to care_pat',
-                  style: TextStyle(fontSize: 18.0),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 20.0),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SecondPage()), 
-              );
-            },
-            child: Container(
-              padding: const EdgeInsets.all(10.0),
+      // appBar: AppBar(
+      //   title: const Text('Create Your Care Profile'),
+      // ),
+      backgroundColor: Colors.blue[600],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            // Container(
+            //   decoration: BoxDecoration(
+            //     borderRadius: BorderRadius.circular(20.0),
+            //     color:Colors.white,
+            //   ),
+            //   child: SizedBox(
+            //     width:300,
+            //     height: 300,
+            //     child: Image.asset('assets/images/img_rectangle_1.png',
+            //     fit:BoxFit.cover),
+            //   ),
+
+            //   Container(
+            //     width:300,
+            //     height:100,
+                
+                
+            //   ),
+            // ),
+
+            
+            Container(
               decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.blue,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                )
               ),
-              child: const CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+              width: 300,
+              height: 300,
+              child: Image.asset('assets/images/img_rectangle_1.png',
+              fit: BoxFit.cover,), 
+              // Replace with your image path
+            ),
+            // const SizedBox(height: 20),
+
+            Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+                color: Colors.white,
+              ),
+             
+              child: const SizedBox(
+                width: 300,
+                height:50,
+                child: Center(
+                child:Text(
+                  'Create your Care profile',
+                  style: TextStyle(fontSize: 20.0),
+                )
+                ),
               ),
             ),
-          ),
-        ],
+           
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondPage()));
+              },
+              child: const Text('Lets get started....'),
+            ),
+          ],
+        ),
       ),
     );
   }

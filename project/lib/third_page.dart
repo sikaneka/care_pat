@@ -7,7 +7,7 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Second Page"),
+        title: const Text("Temperature"),
       ),
       body: Center(
         child: Column(
@@ -23,7 +23,7 @@ class ThirdPage extends StatelessWidget {
             const SizedBox(height: 20),
             // Text widget with description
             const Text(
-              "body temperature",
+              "Body Temperature is perfectly balanced, keeping in optimal health.",
               style: TextStyle(fontSize: 16),
               textAlign: TextAlign.center,
             ),
