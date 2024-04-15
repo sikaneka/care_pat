@@ -9,7 +9,17 @@ class HeartRate extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Heart Rate"),
       ),
-      body: Center(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [
+              Colors.blue,
+              Colors.red,
+            ],
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

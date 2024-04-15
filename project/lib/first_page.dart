@@ -40,9 +40,21 @@ class _FirstPageState extends State<FirstPage> {
                 ),
                 width: 300,
                 height: 300,
-                child: Image.asset(
-                  'assets/images/img_rectangle_1.png',
-                  fit: BoxFit.cover,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 2,
+                    ),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(18),
+                    child: Image.asset(
+                      'assets/images/img_rectangle_1.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 20),

@@ -9,7 +9,17 @@ class Registration extends StatelessWidget {
       appBar: AppBar(
         title: Text('Registration'),
       ),
-      body: Padding(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [
+              Colors.blue,
+              Colors.red,
+            ],
+          ),
+        ),
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
