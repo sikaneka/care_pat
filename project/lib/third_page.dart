@@ -9,7 +9,8 @@ class ThirdPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Temperature"),
       ),
-      body: Center(
+      body: Container(
+        decoration: BoxDecoration(color: Color.fromARGB(255, 104, 67, 52)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

@@ -13,7 +13,7 @@ class FallDetection extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           Image.asset(
+            Image.asset(
               "assets/images/fall.png",
               width: 200,
               height: 200,
