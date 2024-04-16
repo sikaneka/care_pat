@@ -10,7 +10,7 @@ class ThirdPage extends StatelessWidget {
         title: const Text("Temperature"),
       ),
       body: Container(
-        decoration: BoxDecoration(color: Color.fromARGB(255, 104, 67, 52)),
+        decoration: BoxDecoration(color: Color.fromARGB(255, 146, 88, 65)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
