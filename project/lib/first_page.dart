@@ -35,7 +35,7 @@ class _FirstPageState extends State<FirstPage> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 22, 11, 11),
                       width: 2,
                     ),
                   ),
