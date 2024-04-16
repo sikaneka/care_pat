@@ -146,16 +146,7 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [
-              Colors.blue,
-              Colors.red,
-            ],
-          ),
-        ),
+        decoration: BoxDecoration(color: Color.fromARGB(255, 104, 67, 52)),
         child: GridView.count(
           crossAxisCount: 2,
           children: [
