@@ -8,9 +8,10 @@ class HeartRate extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Heart Rate"),
+        backgroundColor: const Color.fromARGB(255, 146, 88, 65),
       ),
       body: Container(
-        decoration: const BoxDecoration(color: Color.fromARGB(255, 104, 67, 52)),
+        decoration: const BoxDecoration(color: Color.fromARGB(255, 146, 88, 65)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -25,7 +26,7 @@ class HeartRate extends StatelessWidget {
             // Text widget with description
             const Text(
               "Heart rate is in ideal role, reflecting overall fitness and vitality.",
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16, color: Colors.white),
               textAlign: TextAlign.center,
             ),
           ],

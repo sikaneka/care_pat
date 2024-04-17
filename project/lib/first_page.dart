@@ -16,7 +16,7 @@ class _FirstPageState extends State<FirstPage> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
-        decoration: const BoxDecoration(color: Color.fromARGB(255, 104, 67, 52)),
+        decoration: const BoxDecoration(color: Color.fromARGB(255, 146, 88, 65)),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -35,8 +35,8 @@ class _FirstPageState extends State<FirstPage> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
-                      color: Colors.white,
-                      width: 2,
+                      color: const Color.fromARGB(255, 102, 95, 95),
+                      width: 3,
                     ),
                   ),
                   child: ClipRRect(

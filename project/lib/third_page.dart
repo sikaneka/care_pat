@@ -8,6 +8,7 @@ class ThirdPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Temperature"),
+        backgroundColor: Color.fromARGB(255, 146, 88, 65),
       ),
       body: Container(
         decoration: const BoxDecoration(color: Color.fromARGB(255, 146, 88, 65)),
@@ -25,7 +26,7 @@ class ThirdPage extends StatelessWidget {
             // Text widget with description
             const Text(
               "Body Temperature is perfectly balanced, keeping in optimal health.",
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16, color: Colors.white),
               textAlign: TextAlign.center,
             ),
           ],
