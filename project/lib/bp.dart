@@ -10,7 +10,7 @@ class BloodPressure extends StatelessWidget {
         title: const Text("Blood pressure"),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,

@@ -10,7 +10,7 @@ class HeartRate extends StatelessWidget {
         title: const Text("Heart Rate"),
       ),
       body: Container(
-        decoration: BoxDecoration(color: Color.fromARGB(255, 104, 67, 52)),
+        decoration: const BoxDecoration(color: Color.fromARGB(255, 104, 67, 52)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
