@@ -12,7 +12,7 @@ class ThirdPage extends StatelessWidget {
       ),
       backgroundColor: Color.fromARGB(255, 146, 88, 65),
       body: Container(
-        decoration: BoxDecoration(color: Color.fromARGB(255, 146, 88, 65)),
+        decoration: const BoxDecoration(color: Color.fromARGB(255, 146, 88, 65)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

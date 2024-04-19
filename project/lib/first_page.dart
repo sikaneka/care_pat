@@ -4,7 +4,7 @@ import 'registration.dart';
 import 'second_page.dart';
 
 class FirstPage extends StatefulWidget {
-  const FirstPage({Key? key}) : super(key: key);
+  const FirstPage({super.key});
 
   @override
   _FirstPageState createState() => _FirstPageState();
@@ -16,7 +16,7 @@ class _FirstPageState extends State<FirstPage> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
-        decoration: BoxDecoration(color: Color.fromARGB(255, 146, 88, 65)),
+        decoration: const BoxDecoration(color: Color.fromARGB(255, 146, 88, 65)),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +35,7 @@ class _FirstPageState extends State<FirstPage> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
-                      color: Color.fromARGB(255, 102, 95, 95),
+                      color: const Color.fromARGB(255, 102, 95, 95),
                       width: 3,
                     ),
                   ),

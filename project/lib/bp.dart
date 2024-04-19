@@ -8,10 +8,19 @@ class BloodPressure extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Blood pressure"),
-        backgroundColor: Color.fromARGB(255, 146, 88, 65),
       ),
       backgroundColor: Color.fromARGB(255, 146, 88, 65),
       body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [
+              Colors.blue,
+              Colors.red,
+            ],
+          ),
+        ),
         // MediaQuery.of(context).size.width * 0.99999, // 60% of screen width
         // height:100%,
         // MediaQuery.of(context).size.width * 0.99999, // 60% of screen width
@@ -28,7 +37,7 @@ class BloodPressure extends StatelessWidget {
             // Text widget with description
             const Text(
               "Blood pressure is in healthy state, keep up the good work.",
-              style: TextStyle(fontSize: 16, color: Colors.white),
+              style: TextStyle(fontSize: 16),
               textAlign: TextAlign.center,
             ),
           ],

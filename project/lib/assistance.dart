@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Assistance extends StatelessWidget {
-  const Assistance({Key? key}) : super(key: key);
+  const Assistance({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,8 +9,8 @@ class Assistance extends StatelessWidget {
       // Wrap Scaffold in a Container
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Assistance'),
-          backgroundColor: Color.fromARGB(255, 146, 88, 65),
+          title: const Text('Assistance'),
+          backgroundColor: const Color.fromARGB(255, 146, 88, 65),
         ),
         body: SingleChildScrollView(
           child: Padding(
@@ -28,19 +28,19 @@ class Assistance extends StatelessWidget {
                     TableCell(
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text('Parameter')),
+                        child: const Center(child: Text('Parameter')),
                       ),
                     ),
                     TableCell(
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text('Values')),
+                        child: const Center(child: Text('Values')),
                       ),
                     ),
                     TableCell(
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text('Condition')),
+                        child: const Center(child: Text('Condition')),
                       ),
                     ),
                   ],
@@ -50,7 +50,7 @@ class Assistance extends StatelessWidget {
                     TableCell(
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text('Temperature')),
+                        child: const Center(child: Text('Temperature')),
                       ),
                     ),
                     TableCell(
@@ -58,15 +58,15 @@ class Assistance extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('< 35°C ')),
+                            child: const Center(child: Text('< 35°C ')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('36.1 - 37.2°C')),
+                            child: const Center(child: Text('36.1 - 37.2°C')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('> 38°C ')),
+                            child: const Center(child: Text('> 38°C ')),
                           ),
                         ],
                       ),
@@ -76,15 +76,15 @@ class Assistance extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('Hypothermia')),
+                            child: const Center(child: Text('Hypothermia')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('Normal')),
+                            child: const Center(child: Text('Normal')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('Fever')),
+                            child: const Center(child: Text('Fever')),
                           ),
                         ],
                       ),
@@ -96,7 +96,7 @@ class Assistance extends StatelessWidget {
                     TableCell(
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text('Heart rate')),
+                        child: const Center(child: Text('Heart rate')),
                       ),
                     ),
                     TableCell(
@@ -104,16 +104,16 @@ class Assistance extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('<60 beats per minute')),
+                            child: const Center(child: Text('<60 beats per minute')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
                             child:
-                                Center(child: Text('60-100 beats per minute')),
+                                const Center(child: Text('60-100 beats per minute')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('>100 beats per minute')),
+                            child: const Center(child: Text('>100 beats per minute')),
                           ),
                         ],
                       ),
@@ -123,16 +123,16 @@ class Assistance extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(
+                            child: const Center(
                                 child: Text('Bradycardia (low heart rate)')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('Normal')),
+                            child: const Center(child: Text('Normal')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(
+                            child: const Center(
                                 child: Text('Tachycardia(high heart rate)')),
                           ),
                         ],
@@ -145,7 +145,7 @@ class Assistance extends StatelessWidget {
                     TableCell(
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(child: Text('blood Pressure')),
+                        child: const Center(child: Text('blood Pressure')),
                       ),
                     ),
                     TableCell(
@@ -153,17 +153,17 @@ class Assistance extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('90/60 mm Hg or less.')),
+                            child: const Center(child: Text('90/60 mm Hg or less.')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(
+                            child: const Center(
                                 child: Text(' 90/60 mm Hg - 120/80 mm Hg ')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
                             child:
-                                Center(child: Text('140/90 mm Hg or higher')),
+                                const Center(child: Text('140/90 mm Hg or higher')),
                           ),
                         ],
                       ),
@@ -173,15 +173,15 @@ class Assistance extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('Low bp')),
+                            child: const Center(child: Text('Low bp')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('Normal')),
+                            child: const Center(child: Text('Normal')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Center(child: Text('High bp')),
+                            child: const Center(child: Text('High bp')),
                           ),
                         ],
                       ),
