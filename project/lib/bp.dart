@@ -11,16 +11,16 @@ class BloodPressure extends StatelessWidget {
       ),
       backgroundColor: Color.fromARGB(255, 146, 88, 65),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [
-              Colors.blue,
-              Colors.red,
-            ],
-          ),
-        ),
+        // decoration: const BoxDecoration(
+        //   gradient: LinearGradient(
+        //     begin: Alignment.topRight,
+        //     end: Alignment.bottomLeft,
+        //     // colors: [
+        //     //   Colors.blue,
+        //     //   Colors.red,
+        //     // ],
+        //   ),
+        // ),
         // MediaQuery.of(context).size.width * 0.99999, // 60% of screen width
         // height:100%,
         // MediaQuery.of(context).size.width * 0.99999, // 60% of screen width
