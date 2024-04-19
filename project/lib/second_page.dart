@@ -48,7 +48,7 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       body: Container(
         decoration:
-            const BoxDecoration(color: Color.fromARGB(255, 104, 67, 52)),
+            const BoxDecoration(color: Color.fromARGB(255, 163, 93, 66)),
         child: GridView.count(
           crossAxisCount: 2,
           children: [
@@ -89,18 +89,10 @@ class _SecondPageState extends State<SecondPage> {
       child: Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.5),
-              spreadRadius: 5,
-              blurRadius: 7,
-              offset: const Offset(0, 3),
-            ),
-          ],
+          color: Color.fromARGB(255, 163, 93, 66),
         ),
         child: AspectRatio(
-          aspectRatio: 1,
+          aspectRatio: 3,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -111,8 +103,10 @@ class _SecondPageState extends State<SecondPage> {
               const SizedBox(height: 5),
               Text(
                 text,
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
             ],
           ),
