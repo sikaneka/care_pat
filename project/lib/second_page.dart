@@ -152,7 +152,7 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       body: Container(
         decoration:
-            const BoxDecoration(color: Color.fromARGB(255, 104, 67, 52)),
+            const BoxDecoration(color: Color.fromARGB(255, 163, 93, 66)),
         child: GridView.count(
           crossAxisCount: 2,
           children: [
@@ -193,18 +193,10 @@ class _SecondPageState extends State<SecondPage> {
       child: Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.5),
-              spreadRadius: 5,
-              blurRadius: 7,
-              offset: const Offset(0, 3),
-            ),
-          ],
+          color: Color.fromARGB(255, 163, 93, 66),
         ),
         child: AspectRatio(
-          aspectRatio: 1,
+          aspectRatio: 3,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -215,8 +207,10 @@ class _SecondPageState extends State<SecondPage> {
               const SizedBox(height: 5),
               Text(
                 text,
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
             ],
           ),
@@ -225,43 +219,3 @@ class _SecondPageState extends State<SecondPage> {
     );
   }
 }
-// Widget buildCircularContainer(String text, String imageUrl, VoidCallback onTap) {
-//   return GestureDetector(
-//     onTap: onTap,
-//     child: Container(
-//       width: 120,
-//       height: 120,
-//      decoration: BoxDecoration(
-//         borderRadius:
-//          BorderRadius.circular(20),
-//         color: Colors.white),
-//         boxShadow: [
-//           BoxShadow(
-//             color: Colors.black.withOpacity(0.5),
-//             spreadRadius: 5,
-//             blurRadius: 7,
-//             offset: const Offset(0, 3),
-//           ),
-//         ],
-//       ),
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           ClipOval(
-//             child: Image.network(
-//               imageUrl,
-//               width: 100, // Adjust width here
-//               height: 100, // Adjust height here
-//               fit: BoxFit.cover, // Fit the image inside the oval
-//             ),
-//           ),
-//           const SizedBox(height: 5),
-//           Text(
-//             text,
-//             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-//           ),
-//         ],
-//       ),
-//     ),
-//   );
-// }

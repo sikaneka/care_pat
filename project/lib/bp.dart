@@ -10,12 +10,11 @@ class BloodPressure extends StatelessWidget {
         title: const Text("Blood pressure"),
         backgroundColor: Color.fromARGB(255, 146, 88, 65),
       ),
+      backgroundColor: Color.fromARGB(255, 146, 88, 65),
       body: Container(
-        color: Color.fromARGB(255, 146, 88, 65),
-        width:100%,
-            // MediaQuery.of(context).size.width * 0.99999, // 60% of screen width
-        height:100%,
-           // MediaQuery.of(context).size.width * 0.99999, // 60% of screen width
+        // MediaQuery.of(context).size.width * 0.99999, // 60% of screen width
+        // height:100%,
+        // MediaQuery.of(context).size.width * 0.99999, // 60% of screen width
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
