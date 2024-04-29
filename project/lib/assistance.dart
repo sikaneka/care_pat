@@ -108,16 +108,18 @@ class Assistance extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('<60 beats per minute')),
+                            child: const Center(
+                                child: Text('<60 beats per minute')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child:
-                                const Center(child: Text('60-100 beats per minute')),
+                            child: const Center(
+                                child: Text('60-100 beats per minute')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('>100 beats per minute')),
+                            child: const Center(
+                                child: Text('>100 beats per minute')),
                           ),
                         ],
                       ),
@@ -157,7 +159,8 @@ class Assistance extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('90/60 mm Hg or less.')),
+                            child: const Center(
+                                child: Text('90/60 mm Hg or less.')),
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
@@ -166,8 +169,8 @@ class Assistance extends StatelessWidget {
                           ),
                           Container(
                             padding: const EdgeInsets.all(8.0),
-                            child:
-                                const Center(child: Text('140/90 mm Hg or higher')),
+                            child: const Center(
+                                child: Text('140/90 mm Hg or higher')),
                           ),
                         ],
                       ),

@@ -1,25 +1,17 @@
 import 'package:flutter/material.dart';
 
 class Registration extends StatelessWidget {
-  const Registration({super.key});
+  const Registration();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Registration'),
+        backgroundColor: const Color.fromARGB(255, 146, 88, 65),
       ),
+      backgroundColor: const Color.fromARGB(255, 146, 88, 65),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [
-              Colors.blue,
-              Colors.red,
-            ],
-          ),
-        ),
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
