@@ -8,6 +8,7 @@ class BloodPressure extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Blood pressure"),
+        backgroundColor: Color.fromARGB(255, 146, 88, 65),
       ),
       backgroundColor: Color.fromARGB(255, 146, 88, 65),
       body: Container(
