@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project/provider/control.dart';
+import 'package:provider/provider.dart';
 
 class FallDetection extends StatelessWidget {
   const FallDetection({Key? key});
@@ -25,11 +27,15 @@ class FallDetection extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             // Text widget with description
-            const Text(
-              "There is a high likelihood of falling.",
-              style: TextStyle(fontSize: 16),
-              textAlign: TextAlign.center,
-            ),
+             Consumer<Loginprovider>(
+               builder: (context,value,child) {
+                 return value.falldetection ?Text(
+                  "There is a high likelihood of falling.",
+                  style: TextStyle(fontSize: 16),
+                  textAlign: TextAlign.center,
+                             ):Text("NO CHNACE");
+               }
+             ),
           ],
         ),
       ),

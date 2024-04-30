@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:project/provider/control.dart';
+import 'package:provider/provider.dart';
 
-class HeartRate extends StatelessWidget {
+class HeartRate extends StatefulWidget {
   const HeartRate({super.key});
 
+  
+
+  @override
+  State<HeartRate> createState() => _HeartRateState();
+}
+
+class _HeartRateState extends State<HeartRate> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +34,14 @@ class HeartRate extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             // Text widget with description
-            const Text(
-              "Heart rate is in ideal role, reflecting overall fitness and vitality.",
-              style: TextStyle(fontSize: 16, color: Colors.white),
-              textAlign: TextAlign.center,
+            Consumer<Loginprovider>(
+              builder: (context,value,child) {
+                return  Text(
+                  "Heart rate is ${value.heart_ratelist.last.toString()} in ideal role, reflecting overall fitness and vitality.",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  textAlign: TextAlign.center,
+                );
+              }
             ),
           ],
         ),

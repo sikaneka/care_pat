@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project/provider/control.dart';
+import 'package:provider/provider.dart';
 
 class ThirdPage extends StatelessWidget {
   const ThirdPage({super.key});
@@ -25,10 +27,18 @@ class ThirdPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             // Text widget with description
-            const Text(
-              "Body Temperature is perfectly balanced, keeping in optimal health.",
-              style: TextStyle(fontSize: 16, color: Colors.white),
-              textAlign: TextAlign.center,
+            Consumer<Loginprovider>(
+              builder: (context,value,child) {
+                return value.temp? Text(
+                  "Body Temperature is ${value.templist.last.toString()} perfectly balanced, keeping in optimal health.",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  textAlign: TextAlign.center,
+                ):Text(
+                  "Body Temperature is ${value.templist.last.toString()} Abnormal",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  textAlign: TextAlign.center,
+                );
+              }
             ),
           ],
         ),

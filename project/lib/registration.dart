@@ -25,6 +25,25 @@ class Registration extends StatelessWidget {
             const SizedBox(height: 20),
             const TextField(
               decoration: InputDecoration(
+                labelText: 'Age',
+              ),
+              keyboardType: TextInputType.number,
+            ),
+            const SizedBox(height: 20),
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'Medical Condition',
+              ),
+            ),
+            const SizedBox(height: 20),
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'Doctor Referred',
+              ),
+            ),
+            const SizedBox(height: 20),
+            const TextField(
+              decoration: InputDecoration(
                 labelText: 'Phone Number',
               ),
               keyboardType: TextInputType.phone,
