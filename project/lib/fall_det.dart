@@ -33,7 +33,7 @@ class FallDetection extends StatelessWidget {
                   "There is a high likelihood of falling.",
                   style: TextStyle(fontSize: 16),
                   textAlign: TextAlign.center,
-                             ):Text("NO CHNACE");
+                             ):Text("Patient is safe with no risk of falling.\n Relax, we're watching over them closely.");
                }
              ),
           ],
