@@ -1,16 +1,11 @@
 
 
-// import 'package:flutter/material.dart';
- import 'package:flutter/foundation.dart';
- import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-// // import 'package:project/signin.dart';
 import 'package:project/auth/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project/heartrate.dart';
-
-//import 'package:project/auth/login.dart';
-import 'package:project/pages/home.dart';
 import 'package:project/provider/control.dart';
 import 'package:provider/provider.dart';
 
