@@ -36,8 +36,11 @@ class _HeartRateState extends State<HeartRate> {
             // Text widget with description
             Consumer<Loginprovider>(
               builder: (context,value,child) {
-                return  Text(
-                  "Heart rate is ${value.heart_ratelist.last.toString()} in ideal role, reflecting overall fitness and vitality.",
+                return  value.heart?Text(
+                  "Heart rate is in ideal role ${value.heart_ratelist.last.toString()} bpm, reflecting overall fitness and vitality.",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  textAlign: TextAlign.center,
+                ):Text("Heads up: Patient's heart rate is irregular,${value.heart_ratelist.last.toString()} bpm. Monitor closely!.",
                   style: TextStyle(fontSize: 16, color: Colors.white),
                   textAlign: TextAlign.center,
                 );
@@ -49,3 +52,18 @@ class _HeartRateState extends State<HeartRate> {
     );
   }
 }
+
+
+/*Consumer<Loginprovider>(
+              builder: (context,value,child) {
+                return value.temp? Text(
+                  "Body Temperature is ${value.templist.last.toString()}°C perfectly balanced, keeping in optimal health.",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  textAlign: TextAlign.center,
+                ):Text(
+                  "Body temperature's off-key today, ${value.templist.last.toString()}°C. Together, let's work on getting it back on track.",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  textAlign: TextAlign.center,
+                );
+              }
+            ),*/
