@@ -6,7 +6,7 @@ import 'package:project/heartrate.dart';
 import 'package:project/provider/control.dart';
 import 'package:project/registration.dart';
 import 'package:provider/provider.dart';
-
+import 'package:project/pat_reg.dart';
 import 'third_page.dart';
 
 class SecondPage extends StatefulWidget {
@@ -23,7 +23,7 @@ class _SecondPageState extends State<SecondPage> {
     switch (image) {
       case 'Register your patient':
          Navigator.push(context,
-             MaterialPageRoute(builder: (context) => const Registration()));
+             MaterialPageRoute(builder: (context) => RegistrationForm()));
          break;
 
       case 'temperature':
@@ -63,7 +63,7 @@ class _SecondPageState extends State<SecondPage> {
                 buildCircularContainer(
                      'Register your patient',
                      'https://static.vecteezy.com/system/resources/previews/025/782/718/original/blood-pressure-icon-free-vector.jpg',
-                     () => navigateToNextPage('blood_pressure')),
+                     () => navigateToNextPage('Register your patient')),
                 buildCircularContainer(
                     'Temperature',
                     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAolBMVEX3+Pr4+fsAAAD////vHR7Myst/f38ZGRnBwcHV1dWhoaAGBgfS0tLwZmb41NTwJibvFBPtAwDy8fJcXFzk5OSTk5MuLi5TU1P5//9AQEDq6uoeHh5IR0e3t7dycnInJydpaWnG3+I1NTWurq4SEhL69PmJiYnI2NbyW1v429vyxsTwQED05eX1lZXtSEL0u7rtUErzqKnvMzLysLDydXXyioiHUnuBAAAIdElEQVR4nO2dC3ObOBDH9QgYsNPGMgRMDOZsx0nT9HGX3vf/arcrARZ+Qdq58Srjf5umSdsZ/brS7mq1Asauuuqqq666ykVx+IkfCn7FH+6KM4OgxZxG0TZpObj+4tIj+iNxriZBUqVlEYSOs3CZB+WDMFoloZKXHtFvCyaWVyHGwyKd4+f7KOeuOgEuC2BY+lExCb11NBNiU8bS0bkmvZUQs0BJLR4n8GWVSydNI8NUD16awYMrCBZClE4uG859YFF6VmnnzLn0gGZ9nIa2uWSwEqNYo+gwgz9kNBJLA8PN2qljKW0UGPhWiEAqHS1hqunYySV4N++Iaeqkh6pwxWwYjhsWSxzHxhKyeGhWDe+KtHVksBSRVDjoOAB5SsPEc5GaZcSUJSYJo8DMAhusMajw2NMKDE0pNiGYhudRYisk7OQAIsIlAyxqYmA8PV7pixH+RnpLYSshDjMWAXowVbN4kw5MvJ1ZKif0YfSu7CgMl+gVWuWEl8wpGN7AoMOWXGc5xm1fesDnNASmAVCkvTLrh2E6kMo6Bb30aHvUD6O8Iii0YuKG6YexXHOlnIcJZ6u50VbRXv8DphkLg/r7irgz64dhzeqnv/4HuGbq/thSP4zsijJZvwNghZ00R5T3Zj0w8Nmbi3ErsXEgaz5jmXhu7wBGJ8ocJDQgnQknlkjXBvtdM/s4DuBg7G7DfKCgiWum+T711GyIN6vmHybRlJP7j7MF4Cxoon/setbMreSMtitjg7YATTZG3CxsUJyRmTkawE8Z4WRmUEGjqdoa5YTn2nu8mVZE2DYDChrV5qHVaF64DAMZQGBpQtkPvCc3axI0sjQDs2a7X4OuaYbAyOY00/kMABIAlWvVx5mEgQa45qbZSfjOJ5pyshjVbrl0H0YVUa2YemvQe1xzxhjhiMkGwez9g8uMc5Des59xP2haBQ0tyhNtyMnZvSW3E839dhOfsEsbkAEE1onGNqJcCvwNB0CX5jdcs8swbSdg3TrjcKIJhsgbNU2nZNW/bc63pVG1Jk3CBrnmtjozc75wzlVSNwFWgeuWgd+03bPUd81DSk1WRzNtzzwkaDb2aMsalx3xGQ3Imrm0zEM5zAyxTKei6RE2TD+MDBd20rx0ukNDTjrtJm6fAsC37WkWUC43DekE7JTOXV4zKHnwT4iqhcFrczsY6y6AcsQvsy6MdwQGTJQ36QzpXSaqgcH/96env1BPT90rJ61rjigvflQLw7JPd1Oj54w1MNw+oE1J3zdhXZjP0zvU9HYHo7cAvlEZEF8y1jQDmLsbVAemU5xxZ82cgOnmya7D1E9usPY0ZPWuaVb3NpFVHwx2aCwspZSPAfphDgvnZNUPo6KqqgtnIJ/y0zXevWYoFzV7LcP2B0/Yow2AaT0z7ToTGwIj5S5rps3SD8PzqM7NfNJbZlS/NwuW7mXNJy0T+6nRYk158aP6YXaPnXDeAdhJZlMDIEvUHzT3Hm5CloQNsYzMO09qcKEP4LQ3i6vd1caNmLudNe91nLtwT/Nc0OwodhgGV0in1kzZAwxJNFnXPV94xGfUD8M7f5m0BsDsppiibBY2aNvsmx7A5SqgHGNQ78yaadP0ejMZl3XWnDrTCHRmzSjn2k3OuGa8DUi+MKM10DXr2MmonwMOdM2Wf770iM+o35vlzWGT1tbl3Mw8l9axJu0z+5lO+/zC5f0M3p9RUn2M85luDcB5b7Y7BnS+1GTVzWnvZVD922YVRGuj2PkMQE4W481mBNo4c7XxDEzbCVi60nF+ugi4e1qrch2GMds7qwuPtkdDsmbeZs6OW4b26Pd0haGqKwxVXWGo6gpDVudhiIf8rngPzKXH9z5B8piIUzAe9TOMjoBBBvPjMKUYV6RP/Q/EWZDCris+AhOsxNinXL/cE6yYyUoIXxtgDwZo7oGGeldWK9xtzYxd2CGMPjMbRa74M1gwsPhnsT532Z9muL/0hFhQfkWLJWBRY3FfSK47ybIvO5jMlMvYVojEhbiJQwT3O07qrXH28nWqWW7uprevgIOeLk7xnVouzDQYrBBz7a/4Y/ZtWrMgzfeXuiZbOGIaMEzUHLdwYLmxNP3+SU8zGc8Al3odQwvi4oOnYbIfHRag+fma6VwnMW+noi7wyyuxYljny9TXPZib6d+aRRYj4YB3xjm0EqluKc3e7vZYbu7+0abB19MtqJeYURgUffPMn9sDmJvpS8axc6YUI+pVWZRMNqJAmEz9PALzTYdO5QtBvZkJBVFG6BOY7PX7EZhbqe8IIwx9FoavntTJynGYrxnOMwNDn0ZGZ6fZbfbIsdvMERhwAKXu9n89BvMGc4w74gDQNd+Lhbm68Gs/zGhvxszbZyoH1j9MoYWYm2Tmx2GceTZv1VwLsSbfZ4YCd7YpdAaQPR9kAD8yXlc7PBdYYNHg25lxzNmnm65tpr9eMSPDh86kMfnzf72HgS3AaiJx65K9TW2a6e0XbRgOeXVEvjHDCHfNPs90evbD3s88axb9yInlxJEaLZdLfKOU7lnMXv/FR07goyc+v+kdDHxAkElciP9aEnaSqU5pHmGqvb7dwtL59aIy0yeDf7qYuMICKmG8ofYBGX5omRN/hSwPBf2e2Uac56m2DVji0Zz0M9PC8MgxxIwT+k1mrWCg4QxoAv1k+Uf+WLcwgJFycGRiqwuajsBghSae4eWrUO5elsOlVEElxGarHPFkRhhsQn8DCyfy8vbyUlj497Be1or+y4AsmUtYeYRPMFqVSbQOvGAdJSlezKjMM3PcgTHBXao4GWND2Xi5WqzMOw3SIpeMfL/8McGI42C2a8aebz3qV2XOCT1w7AVJWflrL1TcifryaWGdfHd90WkWXp9h7NrkLj2iP1FrCtqX5K+66qqrrvqf9R+09MXUPwJjzQAAAABJRU5ErkJggg==',
