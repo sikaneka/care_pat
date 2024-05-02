@@ -53,17 +53,3 @@ class _HeartRateState extends State<HeartRate> {
   }
 }
 
-
-/*Consumer<Loginprovider>(
-              builder: (context,value,child) {
-                return value.temp? Text(
-                  "Body Temperature is ${value.templist.last.toString()}°C perfectly balanced, keeping in optimal health.",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                  textAlign: TextAlign.center,
-                ):Text(
-                  "Body temperature's off-key today, ${value.templist.last.toString()}°C. Together, let's work on getting it back on track.",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                  textAlign: TextAlign.center,
-                );
-              }
-            ),*/
