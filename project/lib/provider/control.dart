@@ -1,7 +1,9 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_vibrate/flutter_vibrate.dart';
 import 'package:project/main.dart';
 
 class Loginprovider extends ChangeNotifier{
@@ -82,6 +84,9 @@ void getheartrate(){
         notifyListeners();
       }
       else{
+        Vibrate.vibrate();
+        final player=AudioPlayer();
+        player.play(AssetSource('alarm-beep.mp3'));
         heart=false;
         notifyListeners();
         }
