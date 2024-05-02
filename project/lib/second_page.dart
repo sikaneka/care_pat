@@ -6,7 +6,7 @@ import 'package:project/heartrate.dart';
 import 'package:project/provider/control.dart';
 import 'package:project/registration.dart';
 import 'package:provider/provider.dart';
-
+import 'package:project/pat_reg.dart';
 import 'third_page.dart';
 
 class SecondPage extends StatefulWidget {
@@ -23,7 +23,7 @@ class _SecondPageState extends State<SecondPage> {
     switch (image) {
       case 'Register your patient':
          Navigator.push(context,
-             MaterialPageRoute(builder: (context) => const Registration()));
+             MaterialPageRoute(builder: (context) => RegistrationForm()));
          break;
 
       case 'temperature':
