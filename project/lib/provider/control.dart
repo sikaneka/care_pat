@@ -1,3 +1,6 @@
+import 'dart:collection';
+import 'dart:js';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -7,7 +10,10 @@ import 'package:flutter_vibrate/flutter_vibrate.dart';
 import 'package:project/main.dart';
 
 class Loginprovider extends ChangeNotifier{
+
+
 final DatabaseReference mRootReference = FirebaseDatabase.instance.ref();
+   FirebaseFirestore db =FirebaseFirestore.instance;
 
  TextEditingController passwordTextController = TextEditingController();
    TextEditingController emailTextController = TextEditingController();
@@ -139,6 +145,57 @@ void getTemperature(){
     }
   });
 }
+
+
+
+TextEditingController namecontroller =TextEditingController();
+TextEditingController lastcontroller =TextEditingController();
+TextEditingController phonenumbercontroller =TextEditingController();
+TextEditingController agecontroller =TextEditingController();
+TextEditingController gendercontroller =TextEditingController();
+TextEditingController medcondcontroller =TextEditingController();
+TextEditingController doctorcontroller =TextEditingController();
+TextEditingController addcontroller =TextEditingController();
+
+TextEditingController fnamecontroller =TextEditingController();
+TextEditingController lnamecontroller =TextEditingController();
+TextEditingController relationcontroller =TextEditingController();
+TextEditingController phncontroller =TextEditingController();
+
+   void addregistration(BuildContext context){
+
+    String id =DateTime.now().millisecondsSinceEpoch.toString();
+     Map<String ,dynamic> addmap =HashMap();
+    addmap["REGISTRATION_ID"]=id;
+    addmap["FIRST_NAME"]=namecontroller.text;
+    addmap["LAST_NAME"]=lastcontroller.text;
+    addmap["PHONE_NUMBER"]=phonenumbercontroller.text;
+    addmap["AGE"]=agecontroller.text;
+    addmap["GENDER"]=gendercontroller.text;
+    addmap["MED_COND"]=medcondcontroller.text;
+    addmap["DOCTOR"]=doctorcontroller.text;
+    addmap["ADDRESS"]=addcontroller.text;
+    addmap["F_NAME"]=fnamecontroller.text;
+    addmap["L_NAME"]=lnamecontroller.text;
+    addmap["RELATION"]=relationcontroller.text;
+    addmap["PHONE"]=phncontroller.text;
+
+
+
+
+    db.collection("PATIENTS").doc(id).set(addmap);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            " Patient registered successfully ",
+            style: TextStyle(color: Colors.white, fontSize: 15),
+          )),
+    );
+
+   }
+
+
 
 
 
