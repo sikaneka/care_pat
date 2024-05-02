@@ -139,7 +139,7 @@ class RegistrationForm extends StatelessWidget {
                           
                         ),
                       ),],
-                  ),
+                ),
                    
                 ],
                
@@ -150,4 +150,4 @@ class RegistrationForm extends StatelessWidget {
       ),
     );
   }
-}
+} 
