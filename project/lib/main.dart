@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-// import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
-=======
-
-
-import 'package:flutter/foundation.dart';
-import 'package:firebase_core/firebase_core.dart';
->>>>>>> 93c4b1c4d65acbe353ebd00f8355db67e755408d
 import 'package:flutter/material.dart';
 import 'package:project/auth/login.dart';
-<<<<<<< HEAD
-=======
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:project/heartrate.dart';
->>>>>>> 93c4b1c4d65acbe353ebd00f8355db67e755408d
 import 'package:project/provider/control.dart';
 import 'package:provider/provider.dart';
 
