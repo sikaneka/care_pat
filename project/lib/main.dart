@@ -8,6 +8,8 @@ import 'package:provider/provider.dart';
 Future<void> main() async {
   if (!kIsWeb) {
     WidgetsFlutterBinding.ensureInitialized();
+
+    
     await Firebase.initializeApp();
     runApp(CarePat());
   } else {

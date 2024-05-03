@@ -10,7 +10,7 @@ class RegistrationForm extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(""),
-        backgroundColor: Color.fromARGB(255, 238, 211, 246),
+        backgroundColor: Color.fromARGB(255, 135, 136, 150),
       ),
       body: Stack(
         children: [

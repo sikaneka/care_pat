@@ -45,6 +45,7 @@ class _HeartRateState extends State<HeartRate> {
                   textAlign: TextAlign.center,
                 );
               }
+        
             ),
           ],
         ),
