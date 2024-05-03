@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 
 class Assistance extends StatelessWidget {
   const Assistance({Key? key});
@@ -24,10 +22,11 @@ class Assistance extends StatelessWidget {
               children: [
                 // Table
                 Table(
-                  border: TableBorder.all(color: Colors.black,width: 2),
+                  border: TableBorder.all(color: Colors.black, width: 2),
                   children: [
                     TableRow(
-                      decoration:BoxDecoration(color:Color.fromARGB(250, 184, 151, 120)) ,
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(250, 184, 151, 120)),
                       children: [
                         TableCell(
                           child: Container(
@@ -49,152 +48,156 @@ class Assistance extends StatelessWidget {
                         ),
                       ],
                     ),
-                                    TableRow(
-                  children: [
-                    TableCell(
-                      child: Container(
-                        padding: const EdgeInsets.all(8.0),
-                        child: const Center(child: Text('Temperature')),
-                      ),
+                    TableRow(
+                      children: [
+                        TableCell(
+                          child: Container(
+                            padding: const EdgeInsets.all(8.0),
+                            child: const Center(child: Text('Temperature')),
+                          ),
+                        ),
+                        TableCell(
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(child: Text('< 35°C ')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child:
+                                    const Center(child: Text('36.1 - 37.2°C')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(child: Text('> 38°C ')),
+                              ),
+                            ],
+                          ),
+                        ),
+                        TableCell(
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(child: Text('Hypothermia')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(child: Text('Normal')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(child: Text('Fever')),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                    TableCell(
-                      child: Column(
-                        children: [
-                          Container(
+                    TableRow(
+                      children: [
+                        TableCell(
+                          child: Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('< 35°C ')),
+                            child: const Center(child: Text('Heart rate')),
                           ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('36.1 - 37.2°C')),
+                        ),
+                        TableCell(
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(
+                                    child: Text('<60 beats per minute')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(
+                                    child: Text('60-100 beats per minute')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(
+                                    child: Text('>100 beats per minute')),
+                              ),
+                            ],
                           ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('> 38°C ')),
+                        ),
+                        TableCell(
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(
+                                    child:
+                                        Text('Bradycardia (low heart rate)')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(child: Text('Normal')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(
+                                    child:
+                                        Text('Tachycardia(high heart rate)')),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    TableCell(
-                      child: Column(
-                        children: [
-                          Container(
+                    TableRow(
+                      children: [
+                        TableCell(
+                          child: Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('Hypothermia')),
+                            child: const Center(child: Text('blood Pressure')),
                           ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('Normal')),
+                        ),
+                        TableCell(
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(
+                                    child: Text('90/60 mm Hg or less.')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(
+                                    child:
+                                        Text(' 90/60 mm Hg - 120/80 mm Hg ')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(
+                                    child: Text('140/90 mm Hg or higher')),
+                              ),
+                            ],
                           ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('Fever')),
+                        ),
+                        TableCell(
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(child: Text('Low bp')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(child: Text('Normal')),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8.0),
+                                child: const Center(child: Text('High bp')),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                TableRow(
-                  children: [
-                    TableCell(
-                      child: Container(
-                        padding: const EdgeInsets.all(8.0),
-                        child: const Center(child: Text('Heart rate')),
-                      ),
-                    ),
-                    TableCell(
-                      child: Column(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(
-                                child: Text('<60 beats per minute')),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(
-                                child: Text('60-100 beats per minute')),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(
-                                child: Text('>100 beats per minute')),
-                          ),
-                        ],
-                      ),
-                    ),
-                    TableCell(
-                      child: Column(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(
-                                child: Text('Bradycardia (low heart rate)')),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('Normal')),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(
-                                child: Text('Tachycardia(high heart rate)')),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                TableRow(
-                  children: [
-                    TableCell(
-                      child: Container(
-                        padding: const EdgeInsets.all(8.0),
-                        child: const Center(child: Text('blood Pressure')),
-                      ),
-                    ),
-                    TableCell(
-                      child: Column(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(
-                                child: Text('90/60 mm Hg or less.')),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(
-                                child: Text(' 90/60 mm Hg - 120/80 mm Hg ')),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(
-                                child: Text('140/90 mm Hg or higher')),
-                          ),
-                        ],
-                      ),
-                    ),
-                    TableCell(
-                      child: Column(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('Low bp')),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('Normal')),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('High bp')),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
                   ],
                 ),
 
@@ -231,51 +234,52 @@ class Assistance extends StatelessWidget {
                       //   onTap: () => launch('https://www.goodsamaritanmc.com/patients/caregiver-instructions'),
                       // ),
                       InkWell(
-  onTap: () => launch('https://www.heart.org/en/health-topics/caregiver-support/resources-for-caregivers'),
-  child: RichText(
-    text: TextSpan(
-      children: [
-        TextSpan(
-          text: 'Resources for caregivers: ',
-          style: TextStyle(
-            color: Colors.black,
-          ),
-        ),
-        TextSpan(
-          text: 'click here',
-          style: TextStyle(
-            color: Colors.blue,
-            decoration: TextDecoration.underline,
-          ),
-        ),
-      ],
-    ),
-  ),
-),
+                        onTap: () => launch(
+                            'https://www.heart.org/en/health-topics/caregiver-support/resources-for-caregivers'),
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: 'Resources for caregivers: ',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              TextSpan(
+                                text: 'click here',
+                                style: TextStyle(
+                                  color: Colors.blue,
+                                  decoration: TextDecoration.underline,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
 
-InkWell(
-  onTap: () => launch('https://www.goodsamaritanmc.com/patients/caregiver-instructions'),
-  child: RichText(
-    text: TextSpan(
-      children: [
-        TextSpan(
-          text: 'Instructions for care givers: ',
-          style: TextStyle(
-            color: Colors.black,
-          ),
-        ),
-        TextSpan(
-          text: 'click here',
-          style: TextStyle(
-            color: Colors.blue,
-            decoration: TextDecoration.underline,
-          ),
-        ),
-      ],
-    ),
-  ),
-),
-
+                      InkWell(
+                        onTap: () => launch(
+                            'https://www.goodsamaritanmc.com/patients/caregiver-instructions'),
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: 'Instructions for care givers: ',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              TextSpan(
+                                text: 'click here',
+                                style: TextStyle(
+                                  color: Colors.blue,
+                                  decoration: TextDecoration.underline,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
