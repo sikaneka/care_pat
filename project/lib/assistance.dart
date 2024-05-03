@@ -13,9 +13,9 @@ class Assistance extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Assistance'),
-          backgroundColor: Color.fromARGB(250, 184, 151, 120),
+          backgroundColor: Color.fromARGB(255, 163, 93, 66),
         ),
-        backgroundColor: Color.fromARGB(250, 184, 151, 120),
+        backgroundColor: Color.fromARGB(255, 163, 93, 66),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
@@ -27,7 +27,7 @@ class Assistance extends StatelessWidget {
                   border: TableBorder.all(color: Colors.black,width: 2),
                   children: [
                     TableRow(
-                      decoration:BoxDecoration(color:Color.fromARGB(250, 184, 151, 120)) ,
+                      decoration:BoxDecoration(color:Color.fromARGB(255, 163, 93, 66)) ,
                       children: [
                         TableCell(
                           child: Container(
