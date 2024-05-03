@@ -1,11 +1,19 @@
+import 'dart:collection';
+import 'dart:js';
+
+import 'package:audioplayers/audioplayers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_vibrate/flutter_vibrate.dart';
 import 'package:project/main.dart';
 
 class Loginprovider extends ChangeNotifier{
+
+
 final DatabaseReference mRootReference = FirebaseDatabase.instance.ref();
+   FirebaseFirestore db =FirebaseFirestore.instance;
 
  TextEditingController passwordTextController = TextEditingController();
    TextEditingController emailTextController = TextEditingController();
@@ -61,200 +69,134 @@ final DatabaseReference mRootReference = FirebaseDatabase.instance.ref();
         .doc(id)
         .set({'email': email, 'name': name, "userid":uid});
   }
+
 List <String> heart_ratelist=[];
- void getheartrate(){
-
-  print("gffgfgfgh");
+bool heart=false;
+void getheartrate(){
+  
   heart_ratelist.clear();
-
-   
-    mRootReference.child("heart_rate").onValue.listen((event) {
-
-      if (event.snapshot.value != null) {
+  mRootReference.child("heart_rate").onValue.listen((event) {
+    if (event.snapshot.value != null) {
         Map<dynamic, dynamic> map = event.snapshot.value as Map;
- 
         map.forEach((key, value) {
 
-          print(key.toString()+"sdfkjhd");
-          print(key.toString()+"sdfkjhd");
-
-
-         
-
-          heart_ratelist.add(value.toString());
-
-
+             heart_ratelist.add(value.toString());
           print(heart_ratelist.length.toString()+"  length");
-          
-
-
-
-
-
-
-notifyListeners();
-          
-
-
+          notifyListeners();
 
         });
+        if(int.parse(heart_ratelist.last.toString())>60 &&int.parse(heart_ratelist.last.toString())<100){
+        heart=true;
+        notifyListeners();
+      }
+      else{
+        Vibrate.vibrate();
+        final player=AudioPlayer();
+        player.play(AssetSource('alarm-beep.mp3'));
+        heart=false;
+        notifyListeners();
+        }
         print(heart_ratelist[2].toString()+"  length");
-
-notifyListeners();
+        notifyListeners();
     }
-      
-
-
-
-
-
-
-    });
-
-
-
-    
-
-
-
-      
-       
-
- }
+  });
+}
 
  bool falldetection =false;
-
  void checkfold(){
-  print("kjggfyju");
-
-
-      mRootReference.child("fall_detection").onValue.listen((event) {
-
-
-
-        if (event.snapshot.value != null) {
-
-
-          mRootReference.child("proximity").onValue.listen((event2) {
-
-            if(event.snapshot.value.toString()=="yes"&& event2.snapshot.value==0){
-
-                falldetection =true;
-
-                notifyListeners();
-
-
-          }
-
-          
- 
-
-            
-
-          });
-         
-
-          
-
-         
-
-
-
-
-
-
-        }
-        
-
-      });
-
-
-
-    }
-
-      
-
   
-  List <String> templist=[];
+  mRootReference.child("fall_detection").onValue.listen((event) {
+    if (event.snapshot.value != null) {
+      mRootReference.child("proximity").onValue.listen((event2) {
+        if(event.snapshot.value.toString()=="yes"&& event2.snapshot.value==0){
+          falldetection =true;
+          notifyListeners();
+        }
+      });
+    }
+  });
+}
 
-  bool temp=false;
+List <String> templist=[];
+bool temp=false;
 void getTemperature(){
 
-  print("gffgfgfgh");
+  
   templist.clear();
-
-   
-    mRootReference.child("temperature").onValue.listen((event) {
-
-      if (event.snapshot.value != null) {
-        Map<dynamic, dynamic> map = event.snapshot.value as Map;
- 
-        map.forEach((key, value) {
-
-          print(key.toString()+"sdfkjhd");
-          print(key.toString()+"sdfkjhd");
-
-
-         
-
-          templist.add(value.toString());
-
-
-          print(templist.length.toString()+"  length");
-          
-
-
-
-
-
-
-notifyListeners();
-          
-
-
-
-        });
-
-        if(double.parse(templist.last.toString())>36.1&&double.parse(templist.last.toString())<37.2){
-
-
-          temp=true;
-
-          notifyListeners();
-
-
-
-
-
-
-        }else{
-          temp=false;
-
-          notifyListeners();
-
+  mRootReference.child("temperature").onValue.listen((event) {
+    if (event.snapshot.value != null) {
+      Map<dynamic, dynamic> map = event.snapshot.value as Map;
+      map.forEach((key, value) {
+                
+        templist.add(value.toString());
+        print(templist.length.toString()+"  length");
+        notifyListeners();
+      });
+      if(double.parse(templist.last.toString())>36.1&&double.parse(templist.last.toString())<37.2){
+        temp=true;
+        notifyListeners();
+      }
+      else{
+        temp=false;
+        notifyListeners();
         }
-        print(templist[2].toString()+"  length");
-
-notifyListeners();
+      print(templist[2].toString()+"  length");
+      notifyListeners();
     }
-      
+  });
+}
+
+
+
+TextEditingController namecontroller =TextEditingController();
+TextEditingController lastcontroller =TextEditingController();
+TextEditingController phonenumbercontroller =TextEditingController();
+TextEditingController agecontroller =TextEditingController();
+TextEditingController gendercontroller =TextEditingController();
+TextEditingController medcondcontroller =TextEditingController();
+TextEditingController doctorcontroller =TextEditingController();
+TextEditingController addcontroller =TextEditingController();
+
+TextEditingController fnamecontroller =TextEditingController();
+TextEditingController lnamecontroller =TextEditingController();
+TextEditingController relationcontroller =TextEditingController();
+TextEditingController phncontroller =TextEditingController();
+
+   void addregistration(BuildContext context){
+
+    String id =DateTime.now().millisecondsSinceEpoch.toString();
+     Map<String ,dynamic> addmap =HashMap();
+    addmap["REGISTRATION_ID"]=id;
+    addmap["FIRST_NAME"]=namecontroller.text;
+    addmap["LAST_NAME"]=lastcontroller.text;
+    addmap["PHONE_NUMBER"]=phonenumbercontroller.text;
+    addmap["AGE"]=agecontroller.text;
+    addmap["GENDER"]=gendercontroller.text;
+    addmap["MED_COND"]=medcondcontroller.text;
+    addmap["DOCTOR"]=doctorcontroller.text;
+    addmap["ADDRESS"]=addcontroller.text;
+    addmap["F_NAME"]=fnamecontroller.text;
+    addmap["L_NAME"]=lnamecontroller.text;
+    addmap["RELATION"]=relationcontroller.text;
+    addmap["PHONE"]=phncontroller.text;
 
 
 
 
+    db.collection("PATIENTS").doc(id).set(addmap);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            " Patient registered successfully ",
+            style: TextStyle(color: Colors.white, fontSize: 15),
+          )),
+    );
+
+   }
 
 
-    });
 
 
-
-    
-
-
-
-      
-       
-
- }
 
 }

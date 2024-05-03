@@ -30,10 +30,11 @@ class FallDetection extends StatelessWidget {
              Consumer<Loginprovider>(
                builder: (context,value,child) {
                  return value.falldetection ?Text(
-                  "There is a high likelihood of falling.",
-                  style: TextStyle(fontSize: 16),
+                  "There is a high likelihood of falling.",style: TextStyle(fontSize: 16, color: Colors.white),
                   textAlign: TextAlign.center,
-                             ):Text("NO CHNACE");
+                  ):Text("Patient is safe with no risk of falling. Relax, we're watching over them closely.",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  textAlign: TextAlign.center,);
                }
              ),
           ],
