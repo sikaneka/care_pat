@@ -33,10 +33,10 @@ class CarePat extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-       ChangeNotifierProvider(create: (context) => Loginprovider(),),
-        
-        ],
-
+        ChangeNotifierProvider(
+          create: (context) => Loginprovider(),
+        ),
+      ],
       child: const MaterialApp(
         title: 'care_pat',
         home: SplashScreen(),
