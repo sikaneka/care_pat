@@ -90,9 +90,9 @@ void getheartrate(){
         notifyListeners();
       }
       else{
-        Vibrate.vibrate();
-        final player=AudioPlayer();
-        player.play(AssetSource('alarm-beep.mp3'));
+        // Vibrate.vibrate();
+        // final player=AudioPlayer();
+        // player.play(AssetSource('alarm-beep.mp3'));
         heart=false;
         notifyListeners();
         }

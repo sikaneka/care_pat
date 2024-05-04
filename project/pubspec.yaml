@@ -91,6 +91,24 @@ flutter:
     - C:\Users\hibat\Desktop\care_pat\project\assets\images\fall.png
 
     # - C:\Users\IT Dept\Desktop\care_pat\project\assets\images
+
+  
+        
+    #- C:\Users\user\care_pat\project\assets\images\op.jpg
+    #- C:\Users\user\care_pat\project\assets\images\fall.png
+    
+    - C:\Users\IT Dept\Desktop\care_pat\project\assets\images\img_rectangle_1.png
+    - C:\Users\IT Dept\Desktop\care_pat\project\assets\images\fall.png
+    - C:\Users\IT Dept\Desktop\care_pat\project\assets\images\op.jpg
+    - C:\Users\IT Dept\Desktop\care_pat\project\assets\alarm-beep.mp3
+    - C:\Users\IT Dept\Desktop\care_pat\project\assets\images\logo.jpeg
+
+        #Sneha's:
+    #- C:\Users\IT Dept\Desktop\care_pat\project\assets\images\img_rectangle_1.png
+    #- C:\Users\IT Dept\Desktop\care_pat\project\assets\images\fall.png
+
+    # - C:\Users\IT Dept\Desktop\care_pat\project\assets\images\
+>>>>>>> 1fabab02568f741103e5b971af7bcb6062080a46
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
