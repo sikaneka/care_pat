@@ -26,7 +26,11 @@ class Assistance extends StatelessWidget {
                   children: [
                     TableRow(
                       decoration: BoxDecoration(
+<<<<<<< HEAD
+                          color: Color.fromARGB(255, 163, 93, 66)),
+=======
                           color: Color.fromARGB(250, 184, 151, 120)),
+>>>>>>> 1fabab02568f741103e5b971af7bcb6062080a46
                       children: [
                         TableCell(
                           child: Container(
