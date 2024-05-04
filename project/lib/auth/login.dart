@@ -20,11 +20,13 @@ class _LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center( // Centering the entire container
+      body: Center(
+        // Centering the entire container
         child: Container(
           color: Colors.white,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center, // Centering the column content
+            mainAxisAlignment:
+                MainAxisAlignment.center, // Centering the column content
             children: [
               Container(
                 child: Text(
@@ -33,7 +35,7 @@ class _LoginFormState extends State<LoginForm> {
                     color: Color.fromARGB(255, 163, 93, 66),
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
-                    fontFamily: 'Poppins',
+                    fontFamily: 'Pacifico',
                   ),
                 ),
                 alignment: Alignment.center,

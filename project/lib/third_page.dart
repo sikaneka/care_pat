@@ -12,9 +12,10 @@ class ThirdPage extends StatelessWidget {
         title: const Text("Temperature"),
         backgroundColor: Color.fromARGB(255, 146, 88, 65),
       ),
-      backgroundColor: Color.fromARGB(255, 146, 88, 65),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: Container(
-        decoration: const BoxDecoration(color: Color.fromARGB(255, 146, 88, 65)),
+        decoration:
+            const BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -27,19 +28,21 @@ class ThirdPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             // Text widget with description
-            Consumer<Loginprovider>(
-              builder: (context,value,child) {
-                return value.temp? Text(
-                  "Body Temperature is ${value.templist.last.toString()}°C perfectly balanced, keeping in optimal health.",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                  textAlign: TextAlign.center,
-                ):Text(
-                  "Body temperature's off-key today, ${value.templist.last.toString()}°C. Together, let's work on getting it back on track.",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                  textAlign: TextAlign.center,
-                );
-              }
-            ),
+            Consumer<Loginprovider>(builder: (context, value, child) {
+              return value.temp
+                  ? Text(
+                      "Body Temperature is ${value.templist.last.toString()}°C perfectly balanced, keeping in optimal health.",
+                      style: TextStyle(fontSize: 16, color: Colors.brown),
+                      textAlign: TextAlign.center,
+                    )
+                  : Text(
+                      "Body temperature's off-key today, ${value.templist.last.toString()}°C. Together, let's work on getting it back on track.",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Color.fromARGB(255, 146, 88, 65)),
+                      textAlign: TextAlign.center,
+                    );
+            }),
           ],
         ),
       ),
