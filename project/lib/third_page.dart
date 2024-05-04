@@ -32,14 +32,16 @@ class ThirdPage extends StatelessWidget {
               return value.temp
                   ? Text(
                       "Body Temperature is ${value.templist.last.toString()}°C perfectly balanced, keeping in optimal health.",
-                      style: TextStyle(fontSize: 16, color: Colors.brown),
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Color.fromARGB(255, 163, 93, 66)),
                       textAlign: TextAlign.center,
                     )
                   : Text(
                       "Body temperature's off-key today, ${value.templist.last.toString()}°C. Together, let's work on getting it back on track.",
                       style: TextStyle(
                           fontSize: 16,
-                          color: Color.fromARGB(255, 146, 88, 65)),
+                          color: Color.fromARGB(255, 163, 93, 66)),
                       textAlign: TextAlign.center,
                     );
             }),
