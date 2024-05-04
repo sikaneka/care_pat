@@ -22,7 +22,7 @@ class _LoginFormState extends State<LoginForm> {
     return Scaffold(
       body: Center( // Centering the entire container
         child: Container(
-          color: Color.fromARGB(255, 163, 93, 66),
+          color: Colors.white,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center, // Centering the column content
             children: [
@@ -30,8 +30,8 @@ class _LoginFormState extends State<LoginForm> {
                 child: Text(
                   'Caring made simple',
                   style: TextStyle(
-                    color: Colors.white,
-                    //fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 163, 93, 66),
+                    fontWeight: FontWeight.bold,
                     fontSize: 40,
                     fontFamily: 'Poppins',
                   ),
@@ -125,10 +125,12 @@ class _LoginFormState extends State<LoginForm> {
                                   : AuthServices.signupUser(
                                       email, password, fullname, context);
                             }
-                          },
+                          },style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 163, 93, 66), // Background color
+                          ),
                           child: Text(
                             login ? 'LOGIN' : 'SIGNUP',
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
@@ -152,7 +154,7 @@ class _LoginFormState extends State<LoginForm> {
                           login
                               ? "Don't have an account? Signup"
                               : "Already have an account? Login",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                       ),
                     ],

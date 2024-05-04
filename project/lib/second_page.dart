@@ -5,7 +5,6 @@ import 'package:project/emergency.dart';
 import 'package:project/fall_det.dart';
 import 'package:project/heartrate.dart';
 import 'package:project/provider/control.dart';
-import 'package:project/registration.dart';
 import 'package:provider/provider.dart';
 import 'package:project/pat_reg.dart';
 import 'third_page.dart';
@@ -61,7 +60,7 @@ class _SecondPageState extends State<SecondPage> {
         builder: (context,value,child) {
           return Container(
             decoration:
-                const BoxDecoration(color: Color.fromARGB(255, 163, 93, 66)),
+                const BoxDecoration(color: Colors.white),
             child: GridView.count(
               crossAxisCount: 2,
               children: [
@@ -120,7 +119,7 @@ class _SecondPageState extends State<SecondPage> {
       child: Container(
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
-          color: Color.fromARGB(255, 163, 93, 66),
+          color: Colors.white,
         ),
         child: AspectRatio(
           aspectRatio: 3,
@@ -137,7 +136,7 @@ class _SecondPageState extends State<SecondPage> {
                 style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white),
+                    color: Color.fromARGB(255, 163, 93, 66)),
               ),
             ],
           ),
