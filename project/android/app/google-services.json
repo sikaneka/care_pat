@@ -1,30 +1,49 @@
 {
-    "project_info": {
-      "project_number": "1008121233833",
-      "firebase_url": "https://care-pat-default-rtdb.firebaseio.com",
-      "project_id": "care-pat",
-      "storage_bucket": "care-pat.appspot.com"
-    },
-    "client": [
-      {
-        "client_info": {
-          "mobilesdk_app_id": "1:1008121233833:android:0a35b9a027eb37bdd284b8",
-          "android_client_info": {
-            "package_name": "com.example.care_pat"
-          }
-        },
-        "oauth_client": [],
-        "api_key": [
-          {
-            "current_key": "AIzaSyCsbEJa4tkT3ForXk7hEHpln9xmAZSGvBI"
-          }
-        ],
-        "services": {
-          "appinvite_service": {
-            "other_platform_oauth_client": []
-          }
+  "project_info": {
+    "project_number": "1008121233833",
+    "firebase_url": "https://care-pat-default-rtdb.firebaseio.com",
+    "project_id": "care-pat",
+    "storage_bucket": "care-pat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008121233833:android:0a35b9a027eb37bdd284b8",
+        "android_client_info": {
+          "package_name": "com.example.care_pat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsbEJa4tkT3ForXk7hEHpln9xmAZSGvBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
         }
       }
-    ],
-    "configuration_version": "1"
-  }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008121233833:android:6faa9182031b4729d284b8",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsbEJa4tkT3ForXk7hEHpln9xmAZSGvBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
