@@ -55,7 +55,7 @@ class CarePat extends StatelessWidget {
         
         ],
 
-      child: MaterialApp(
+      child: const MaterialApp(
         title: 'care_pat',
         
         home:SplashScreen(),
