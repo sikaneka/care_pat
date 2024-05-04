@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:project/auth/login.dart';
-=======
 
 
 import 'package:flutter/foundation.dart';
@@ -12,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:project/auth/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project/heartrate.dart';
->>>>>>> 1fabab02568f741103e5b971af7bcb6062080a46
 import 'package:project/provider/control.dart';
 import 'package:project/splash.dart';
 import 'package:provider/provider.dart';
