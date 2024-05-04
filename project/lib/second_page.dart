@@ -1,6 +1,7 @@
 // container adding
 import 'package:flutter/material.dart';
 import 'package:project/assistance.dart';
+import 'package:project/emergency.dart';
 import 'package:project/fall_det.dart';
 import 'package:project/heartrate.dart';
 import 'package:project/provider/control.dart';
@@ -43,6 +44,10 @@ class _SecondPageState extends State<SecondPage> {
       case 'Assistance':
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const Assistance()));
+        break;
+      case 'Emergency Care':
+        Navigator.push(context,
+          MaterialPageRoute(builder: (context) => Emergency()));
         break;
       default:
         break;
@@ -99,7 +104,7 @@ class _SecondPageState extends State<SecondPage> {
                 buildCircularContainer(
                     'Emergency Care',
                     'data:image/png;base64,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',
-                    () => navigateToNextPage('emergency_care')),
+                    () => navigateToNextPage('Emergency Care')),
               ],
             ),
           );
