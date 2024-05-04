@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vibrate/flutter_vibrate.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:project/main.dart';
 
 class Loginprovider extends ChangeNotifier{
@@ -194,6 +195,7 @@ TextEditingController phncontroller =TextEditingController();
     );
 
    }
+  //  GoogleMapController mapController =GoogleMapController();
 
 
 
