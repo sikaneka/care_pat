@@ -25,7 +25,7 @@ class Assistance extends StatelessWidget {
                   border: TableBorder.all(color: Colors.black, width: 2),
                   children: [
                     TableRow(
-                      decoration: const BoxDecoration(
+                      decoration:BoxDecoration(
                           color:  Color.fromARGB(249, 202, 181, 162)),
                       children: [
                         TableCell(
