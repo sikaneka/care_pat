@@ -80,11 +80,9 @@ void getheartrate(){
     if (event.snapshot.value != null) {
         Map<dynamic, dynamic> map = event.snapshot.value as Map;
         map.forEach((key, value) {
-
              heart_ratelist.add(value.toString());
           print(heart_ratelist.length.toString()+"  length");
           notifyListeners();
-
         });
         if(int.parse(heart_ratelist.last.toString())>60 &&int.parse(heart_ratelist.last.toString())<100){
         heart=true;
