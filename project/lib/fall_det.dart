@@ -11,7 +11,7 @@ class FallDetection extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Fall Detection"),
         backgroundColor:
-            const Color.fromARGB(255, 146, 88, 65), // Change the color as desired
+            Color.fromARGB(255, 163, 93, 66), // Change the color as desired
       ),
       backgroundColor:
           const Color.fromARGB(255, 146, 88, 65), // Change the color as desired
