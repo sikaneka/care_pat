@@ -24,21 +24,21 @@ class _HeartRateState extends State<HeartRate> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Image widget with network placeholder
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Color.fromARGB(255, 163, 93, 66), // Border color
-                  width: 2.0, // Border width
-                ),
-                // borderRadius: BorderRadius.circular(10.0), // Border radius
-              ),
+            // Container(
+            //   decoration: BoxDecoration(
+            //     border: Border.all(
+            //       color: Color.fromARGB(255, 163, 93, 66), // Border color
+            //       width: 2.0, // Border width
+            //     ),
+            //     // borderRadius: BorderRadius.circular(10.0), // Border radius
+            //   ),
               child: Image.network(
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7TIaQFsG1LKJ9UTBPB1BtxO7b0B9h_MJgKQ&s",
                 width: 250,
                 height: 200,
                 fit: BoxFit.cover,
               ),
-            ),
+            // ),
             const SizedBox(height: 20),
             // Text widget with description
             Consumer<Loginprovider>(builder: (context, value, child) {
@@ -47,14 +47,16 @@ class _HeartRateState extends State<HeartRate> {
                       "Heart rate is in ideal role ${value.heart_ratelist.last.toString()} bpm, reflecting overall fitness and vitality.",
                       style: TextStyle(
                           fontSize: 16,
-                          color: Color.fromARGB(255, 163, 93, 66)),
+                          color: Color.fromARGB(255, 163, 93, 66),
+                          fontFamily: 'serif'),
                       textAlign: TextAlign.center,
                     )
                   : Text(
                       "Heads up: Patient's heart rate is irregular,${value.heart_ratelist.last.toString()} bpm. Monitor closely!.",
                       style: TextStyle(
                           fontSize: 16,
-                          color: Color.fromARGB(255, 163, 93, 66)),
+                          color: Color.fromARGB(255, 163, 93, 66),
+                          fontFamily: 'serif'),
                       textAlign: TextAlign.center,
                     );
             }),

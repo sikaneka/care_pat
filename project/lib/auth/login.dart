@@ -127,8 +127,10 @@ class _LoginFormState extends State<LoginForm> {
                                   : AuthServices.signupUser(
                                       email, password, fullname, context);
                             }
-                          },style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 163, 93, 66), // Background color
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(
+                                255, 163, 93, 66), // Background color
                           ),
                           child: Text(
                             login ? 'LOGIN' : 'SIGNUP',
