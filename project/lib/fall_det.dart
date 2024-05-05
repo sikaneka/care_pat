@@ -13,30 +13,45 @@ class FallDetection extends StatelessWidget {
         backgroundColor:
             Color.fromARGB(255, 163, 93, 66), // Change the color as desired
       ),
-      backgroundColor:
-          const Color.fromARGB(255, 146, 88, 65), // Change the color as desired
+      backgroundColor: Colors.white, // Change the color as desired
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              "assets/images/fall.png",
-              width: 200,
-              height: 200,
-              fit: BoxFit.cover,
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Color.fromARGB(255, 163, 93, 66), // Border color
+                  width: 2.0, // Border width
+                ),
+                // borderRadius: BorderRadius.circular(10.0), // Border radius
+              ),
+              child: Image.asset(
+                "assets/images/fall.png",
+                width: 250,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
             ),
             const SizedBox(height: 20),
             // Text widget with description
-             Consumer<Loginprovider>(
-               builder: (context,value,child) {
-                 return value.falldetection ?Text(
-                  "There is a high likelihood of falling.",style: TextStyle(fontSize: 16, color: Colors.white),
-                  textAlign: TextAlign.center,
-                  ):Text("Patient is safe with no risk of falling. Relax, we're watching over them closely.",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                  textAlign: TextAlign.center,);
-               }
-             ),
+            Consumer<Loginprovider>(builder: (context, value, child) {
+              return value.falldetection
+                  ? Text(
+                      "There is a high likelihood of falling.",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Color.fromARGB(255, 163, 93, 66)),
+                      textAlign: TextAlign.center,
+                    )
+                  : Text(
+                      "Patient is safe with no risk of falling. Relax, we're watching over them closely.",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Color.fromARGB(255, 163, 93, 66)),
+                      textAlign: TextAlign.center,
+                    );
+            }),
           ],
         ),
       ),
