@@ -26,7 +26,7 @@ class FallDetection extends StatelessWidget {
             //     ),
             //     // borderRadius: BorderRadius.circular(10.0), // Border radius
             //   ),
-              child: Image.asset(
+               Image.asset(
                 "assets/images/fall.png",
                 width: 250,
                 height: 200,

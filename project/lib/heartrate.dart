@@ -32,7 +32,7 @@ class _HeartRateState extends State<HeartRate> {
             //     ),
             //     // borderRadius: BorderRadius.circular(10.0), // Border radius
             //   ),
-              child: Image.network(
+               Image.network(
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7TIaQFsG1LKJ9UTBPB1BtxO7b0B9h_MJgKQ&s",
                 width: 250,
                 height: 200,

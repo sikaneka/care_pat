@@ -148,6 +148,7 @@ class Loginprovider extends ChangeNotifier {
   TextEditingController lnamecontroller = TextEditingController();
   TextEditingController relationcontroller = TextEditingController();
   TextEditingController phncontroller = TextEditingController();
+  TextEditingController hsptlcontroller=TextEditingController();
 
   void addregistration(BuildContext context) {
     String id = DateTime.now().millisecondsSinceEpoch.toString();
@@ -176,5 +177,13 @@ class Loginprovider extends ChangeNotifier {
           )),
     );
   }
-  //  GoogleMapController mapController =GoogleMapController();
+ /* //  GoogleMapController mapController =GoogleMapController();
+  // Add the below method inside the Loginprovider class in the Control page
+Future<List<String>> fetchNearbyHospitals(double latitude, double longitude) async {
+  // You can implement fetching nearby hospitals using any suitable API or service here
+  // For example, you can use Google Places API or any other service
+  // This is just a placeholder method
+  return ["Hospital A", "Hospital B", "Hospital C"];
+}*/
+
 }
