@@ -141,7 +141,16 @@ class RegistrationForm extends StatelessWidget {
                             ),
                           ),],
                       ),
-                       
+                       Row(
+                        children: [
+                         Expanded(
+                            child: TextField(controller: value.hsptlcontroller,
+                              decoration: InputDecoration(hintText: 'Hospital contact',hintStyle: TextStyle(color:Colors.white,fontFamily: 'Poppins',),),
+                            ),
+                          ),
+                          SizedBox(width: 10.0),
+                          ],
+                      ),
                     ],
                    
                   );

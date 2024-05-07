@@ -11,9 +11,9 @@ class Assistance extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Assistance'),
-          backgroundColor: Color.fromARGB(255, 163, 93, 66),
+          backgroundColor: const Color.fromARGB(255, 163, 93, 66),
         ),
-        backgroundColor: Color.fromARGB(255, 163, 93, 66),
+        backgroundColor: const Color.fromARGB(255,255,255,255),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
@@ -25,30 +25,38 @@ class Assistance extends StatelessWidget {
                   border: TableBorder.all(color: Colors.black, width: 2),
                   children: [
                     TableRow(
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(250, 184, 151, 120)),
+                      decoration:BoxDecoration(
+                          color:  Color.fromARGB(249, 202, 181, 162)),
                       children: [
                         TableCell(
                           child: Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('Parameter')),
+                            child: const Center(child: Text('Parameter',
+                            style: TextStyle(fontWeight: FontWeight.bold,
+                            fontSize: 18.0),)),
                           ),
                         ),
                         TableCell(
                           child: Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('Values')),
+                            child: const Center(child: Text('Values',
+                            style: TextStyle(fontWeight: FontWeight.bold,
+                            fontSize: 18.0),)),
                           ),
                         ),
                         TableCell(
                           child: Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: const Center(child: Text('Condition')),
+                            child: const Center(child: Text('Condition',
+                            style: TextStyle(fontWeight: FontWeight.bold,
+                            fontSize: 18.0),)),
                           ),
                         ),
                       ],
                     ),
                     TableRow(
+                      decoration:const BoxDecoration(
+                          color: Color.fromARGB(249, 228, 215, 203)) ,
                       children: [
                         TableCell(
                           child: Container(
@@ -96,6 +104,8 @@ class Assistance extends StatelessWidget {
                       ],
                     ),
                     TableRow(
+                        decoration:const BoxDecoration(
+                          color: Color.fromARGB(249, 202, 181, 162)) ,
                       children: [
                         TableCell(
                           child: Container(
@@ -149,6 +159,8 @@ class Assistance extends StatelessWidget {
                       ],
                     ),
                     TableRow(
+                        decoration:const BoxDecoration(
+                          color: Color.fromARGB(249, 228, 215, 203)) ,
                       children: [
                         TableCell(
                           child: Container(
@@ -212,7 +224,7 @@ class Assistance extends StatelessWidget {
 
                 // URLs
                 Container(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -222,7 +234,7 @@ class Assistance extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 8.0),
+                      const SizedBox(height: 8.0),
                       // InkWell(
                       //   child: const Text(
                       //     'Caregiver instructions',
@@ -237,7 +249,7 @@ class Assistance extends StatelessWidget {
                         onTap: () => launch(
                             'https://www.heart.org/en/health-topics/caregiver-support/resources-for-caregivers'),
                         child: RichText(
-                          text: TextSpan(
+                          text: const TextSpan(
                             children: [
                               TextSpan(
                                 text: 'Resources for caregivers: ',
@@ -261,7 +273,7 @@ class Assistance extends StatelessWidget {
                         onTap: () => launch(
                             'https://www.goodsamaritanmc.com/patients/caregiver-instructions'),
                         child: RichText(
-                          text: TextSpan(
+                          text: const TextSpan(
                             children: [
                               TextSpan(
                                 text: 'Instructions for care givers: ',
