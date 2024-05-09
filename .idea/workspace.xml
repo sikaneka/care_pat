@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaf4bb9a-f6e1-4866-acbc-08bc390e6b8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/project/android/assets/care_pat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/lib/first_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/project/lib/first_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/project/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/lib/second_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/project/lib/second_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/project/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,9 +36,10 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/IT Dept/Desktop/app",
+    "last_opened_file_path": "C:/Users/user/care_pat",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
