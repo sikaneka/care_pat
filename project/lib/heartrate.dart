@@ -32,21 +32,18 @@ class _HeartRateState extends State<HeartRate> {
             //     ),
             //     // borderRadius: BorderRadius.circular(10.0), // Border radius
             //   ),
-               Image.network(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7TIaQFsG1LKJ9UTBPB1BtxO7b0B9h_MJgKQ&s",
-                width: 250,
-                height: 200,
-                fit: BoxFit.cover,
-              ),
+            Image.asset("assets/images/heartrate.jpeg"),
+
             // ),
             const SizedBox(height: 20),
             // Text widget with description
             Consumer<Loginprovider>(builder: (context, value, child) {
               return value.heart
                   ? Text(
-                      "Heart rate is in ideal role ${value.heart_ratelist.last.toString()} bpm, reflecting overall fitness and vitality.",
+                      "Normal range is 60-100 bpm.\n"
+                      "Current heart rate : ${value.heart_ratelist.last.toString()} bpm, reflecting overall fitness and vitality.",
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 22,
                           color: Color.fromARGB(255, 163, 93, 66),
                           fontFamily: 'serif'),
                       textAlign: TextAlign.center,
@@ -54,7 +51,7 @@ class _HeartRateState extends State<HeartRate> {
                   : Text(
                       "Heads up: Patient's heart rate is irregular,${value.heart_ratelist.last.toString()} bpm. Monitor closely!.",
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 22,
                           color: Color.fromARGB(255, 163, 93, 66),
                           fontFamily: 'serif'),
                       textAlign: TextAlign.center,
