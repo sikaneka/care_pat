@@ -23,18 +23,12 @@ class _HeartRateState extends State<HeartRate> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Image widget with network placeholder
-            // Container(
-            //   decoration: BoxDecoration(
-            //     border: Border.all(
-            //       color: Color.fromARGB(255, 163, 93, 66), // Border color
-            //       width: 2.0, // Border width
-            //     ),
-            //     // borderRadius: BorderRadius.circular(10.0), // Border radius
-            //   ),
-            Image.asset("assets/images/heartrate.jpeg"),
-
-            // ),
+            Image.network('https://th.bing.com/th/id/OIP.444Sj897O3eL-Qe-wpGQYAHaE8?w=273&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+            width: 250,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
+          
             const SizedBox(height: 20),
             // Text widget with description
             Consumer<Loginprovider>(builder: (context, value, child) {

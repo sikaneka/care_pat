@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
 
-    print("codee id her");
+  
 
     Timer? _timer;
 
