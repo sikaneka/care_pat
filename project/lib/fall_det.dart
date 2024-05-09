@@ -24,7 +24,7 @@ class FallDetection extends StatelessWidget {
                 height: 200,
                 fit: BoxFit.cover,
               ),
-            // ),
+        
             const SizedBox(height: 20),
             // Text widget with description
             Consumer<Loginprovider>(builder: (context, value, child) {
@@ -32,15 +32,15 @@ class FallDetection extends StatelessWidget {
                   ? Text(
                       "There is a high likelihood of falling.",
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 22,
                           color: Color.fromARGB(255, 163, 93, 66),
                           fontFamily: 'serif'),
                       textAlign: TextAlign.center,
                     )
                   : Text(
-                      "Patient is safe with no risk of falling. Relax, we're watching over them closely.",
+                      "Patient is safe with no risk of falling.\n Relax, we're watching over them closely.",
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 22,
                           color: Color.fromARGB(255, 163, 93, 66),
                           fontFamily: 'serif'),
                       textAlign: TextAlign.center,
