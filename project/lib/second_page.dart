@@ -8,6 +8,8 @@ import 'package:project/heartrate.dart';
 import 'package:project/pat_reg.dart';
 import 'package:project/provider/control.dart';
 import 'package:provider/provider.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter_vibrate/flutter_vibrate.dart';
 
 import 'third_page.dart';
 
@@ -72,6 +74,9 @@ class _SecondPageState extends State<SecondPage> {
             double.parse(templist.last.toString()) < 37.2) {
           print(".");
         } else {
+          // Vibrate.vibrate();
+          // final player=AudioPlayer();
+          // player.play(AssetSource('alarm-beep.mp3'));
           showAlertDialog(
               context, "Warning", "Caution: Temparature is out of range");
         }
@@ -89,6 +94,9 @@ class _SecondPageState extends State<SecondPage> {
         if (int.parse(heart_ratelist.last.toString()) > 60 &&
             int.parse(heart_ratelist.last.toString()) < 100) {
         } else {
+          // Vibrate.vibrate();
+          // final player=AudioPlayer();
+          // player.play(AssetSource('alarm-beep.mp3'));
           showAlertDialog(
               context, "Warning", "Abnormal heart rate. Please be cautious");
         }
@@ -101,6 +109,9 @@ class _SecondPageState extends State<SecondPage> {
         mRootReference.child("proximity").onValue.listen((event2) {
           if (event.snapshot.value.toString() == "yes" &&
               event2.snapshot.value == 0) {
+                // Vibrate.vibrate();
+          // final player=AudioPlayer();
+          // player.play(AssetSource('alarm-beep.mp3'));
             showAlertDialog(context, "Warning",
                 "Fall is detected. Please be on you guard.");
           }
@@ -133,7 +144,7 @@ class _SecondPageState extends State<SecondPage> {
                 navigateToNextPage('heart_rate');
               }),
               buildCircularContainer(
-                  'Fall Detection', 'assets/images/fall-dp.jpeg', () {
+                  'Fall Detection', 'https://th.bing.com/th/id/OIP.W6AyA8AGPqAyEMuhTG9IQQAAAA?w=322&h=322&rs=1&pid=ImgDetMain', () {
                 value.checkfold();
                 navigateToNextPage('fall_detection');
               }),
