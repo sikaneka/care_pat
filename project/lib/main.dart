@@ -37,7 +37,7 @@ class CarePat extends StatelessWidget {
           create: (context) => Loginprovider(),
         ),
       ],
-      child: const MaterialApp(
+      child: const MaterialApp( debugShowCheckedModeBanner: false,
         title: 'care_pat',
         home: SplashScreen(),
       ),
