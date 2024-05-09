@@ -18,21 +18,13 @@ class FallDetection extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Container(
-            //   decoration: BoxDecoration(
-            //     border: Border.all(
-            //       color: Color.fromARGB(255, 163, 93, 66), // Border color
-            //       width: 1.0, // Border width
-            //     ),
-            //     // borderRadius: BorderRadius.circular(10.0), // Border radius
-            //   ),
-            Image.asset(
-              "assets/images/fall.png",
-              width: 250,
-              height: 200,
-              fit: BoxFit.cover,
-            ),
-            // ),
+               Image.asset(
+                "assets/images/fall.png",
+                width: 250,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
+        
             const SizedBox(height: 20),
             // Text widget with description
             Consumer<Loginprovider>(builder: (context, value, child) {

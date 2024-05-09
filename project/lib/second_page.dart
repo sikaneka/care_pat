@@ -75,7 +75,6 @@ class _SecondPageState extends State<SecondPage> {
           showAlertDialog(
               context, "Warning", "Caution: Temparature is out of range");
         }
-        print(templist[2].toString() + "  length");
       }
     });
 
@@ -85,7 +84,6 @@ class _SecondPageState extends State<SecondPage> {
         Map<dynamic, dynamic> map = event.snapshot.value as Map;
         map.forEach((key, value) {
           heart_ratelist.add(value.toString());
-          print(heart_ratelist.length.toString() + "  length");
           ;
         });
         if (int.parse(heart_ratelist.last.toString()) > 60 &&
@@ -94,7 +92,7 @@ class _SecondPageState extends State<SecondPage> {
           showAlertDialog(
               context, "Warning", "Abnormal heart rate. Please be cautious");
         }
-        print(heart_ratelist[2].toString() + "  length");
+
       }
     });
 

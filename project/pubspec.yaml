@@ -97,12 +97,16 @@ flutter:
     # - C:\Users\user\care_pat\project\assets\images\fall.png
     
 
-    # - C:\Users\user\care_pat\project\assets\images\img_rectangle_1.png
+
+    #- C:\Users\user\care_pat\project\assets\images\img_rectangle_1.png
+    #- C:\Users\user\care_pat\project\assets\alarm-beep.mp3
+    #- C:\Users\user\care_pat\project\assets\images\logo.png
+  
+    
     # - C:\Users\user\care_pat\project\assets\images\fall.png
     # - C:\Users\user\care_pat\project\assets\images\op.jpg
-    # - C:\Users\user\care_pat\project\assets\alarm-beep.mp3
-    # - C:\Users\user\care_pat\project\assets\images\logo.png
-    # - C:\Users\user\care_pat\project\assets\images\heartrate.jpeg
+   
+   
 
         #Sneha's:
     #- C:\Users\IT Dept\Desktop\care_pat\project\assets\images\img_rectangle_1.png
