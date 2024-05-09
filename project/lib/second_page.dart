@@ -17,6 +17,7 @@ class SecondPage extends StatefulWidget {
   @override
   _SecondPageState createState() => _SecondPageState();
 }
+
 final DatabaseReference mRootReference = FirebaseDatabase.instance.ref();
 
 class _SecondPageState extends State<SecondPage> {
@@ -53,13 +54,7 @@ class _SecondPageState extends State<SecondPage> {
   }
 
   @override
-  void initState() {
-
-
-
-
-
-  }
+  void initState() {}
 
   @override
   Widget build(BuildContext context) {
@@ -70,18 +65,17 @@ class _SecondPageState extends State<SecondPage> {
         Map<dynamic, dynamic> map = event.snapshot.value as Map;
         map.forEach((key, value) {
           templist.add(value.toString());
-
-
         });
 
-        print(templist.last.toString()+"hjgjh");
-        if (double.parse(templist.last.toString()) > 36.1 && double.parse(templist.last.toString()) < 37.2) {
+        print(templist.last.toString() + "hjgjh");
+        if (double.parse(templist.last.toString()) > 36.1 &&
+            double.parse(templist.last.toString()) < 37.2) {
           print(".");
         } else {
-          showAlertDialog(context,"Warning","Caution: Temparature is out of range");
+          showAlertDialog(
+              context, "Warning", "Caution: Temparature is out of range");
         }
         print(templist[2].toString() + "  length");
-
       }
     });
 
@@ -92,16 +86,15 @@ class _SecondPageState extends State<SecondPage> {
         map.forEach((key, value) {
           heart_ratelist.add(value.toString());
           print(heart_ratelist.length.toString() + "  length");
-         ;
+          ;
         });
-        if (int.parse(heart_ratelist.last.toString()) > 60 && int.parse(heart_ratelist.last.toString()) < 100) {
-
+        if (int.parse(heart_ratelist.last.toString()) > 60 &&
+            int.parse(heart_ratelist.last.toString()) < 100) {
         } else {
-          showAlertDialog(context,"Warning","Abnormal heart rate. Please be cautious");
-
+          showAlertDialog(
+              context, "Warning", "Abnormal heart rate. Please be cautious");
         }
         print(heart_ratelist[2].toString() + "  length");
-
       }
     });
 
@@ -110,9 +103,8 @@ class _SecondPageState extends State<SecondPage> {
         mRootReference.child("proximity").onValue.listen((event2) {
           if (event.snapshot.value.toString() == "yes" &&
               event2.snapshot.value == 0) {
-
-            showAlertDialog(context,"Warning","Fall is detected. Please be on you guard.");
-
+            showAlertDialog(context, "Warning",
+                "Fall is detected. Please be on you guard.");
           }
         });
       }
@@ -142,9 +134,8 @@ class _SecondPageState extends State<SecondPage> {
 
                 navigateToNextPage('heart_rate');
               }),
-              buildCircularContainer('Fall Detection',
-                  'https://th.bing.com/th/id/OIP.W6AyA8AGPqAyEMuhTG9IQQAAAA?w=322&h=322&rs=1&pid=ImgDetMain',
-                  () {
+              buildCircularContainer(
+                  'Fall Detection', 'assets/images/fall-dp.jpeg', () {
                 value.checkfold();
                 navigateToNextPage('fall_detection');
               }),
@@ -196,13 +187,12 @@ class _SecondPageState extends State<SecondPage> {
     );
   }
 }
-showAlertDialog(BuildContext context,String title,String text) {
 
+showAlertDialog(BuildContext context, String title, String text) {
   // set up the button
   Widget okButton = TextButton(
     child: Text("OK"),
     onPressed: () {
-
       Navigator.of(context).pop();
     },
   );
