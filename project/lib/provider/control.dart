@@ -88,7 +88,7 @@ class Loginprovider extends ChangeNotifier {
           heart = false;
           notifyListeners();
         }
-        print(heart_ratelist[2].toString() + "  length");
+        //print(heart_ratelist[2].toString() + "  length");
         notifyListeners();
       }
     });
@@ -129,7 +129,7 @@ class Loginprovider extends ChangeNotifier {
           temp = false;
           notifyListeners();
         }
-        print(templist[2].toString() + "  length");
+        //print(templist[2].toString() + "  length");
         notifyListeners();
       }
     });
