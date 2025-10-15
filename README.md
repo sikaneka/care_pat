@@ -1,4 +1,4 @@
-# 🏥 Smart Healthcare Monitoring System for Bedridden Patients
+# Smart Healthcare Monitoring System for Bedridden Patients
 
 ## 📌 Project Overview
 
